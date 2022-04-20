@@ -18,17 +18,9 @@ public class GameManager : MonoBehaviour
     //FailSafe to ensure exacly as wanted
     public bool spawned;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-
         SpawnEnemies(enemeySpawns);
-
     }
 
     void SpawnEnemies(int amount)
