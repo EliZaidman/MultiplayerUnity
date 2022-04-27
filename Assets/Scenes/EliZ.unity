@@ -1261,7 +1261,7 @@ MonoBehaviour:
   player: {fileID: 1334546174}
   enemy: {fileID: 1758311650256706669, guid: a17e9d539df61b641933d04f94dd41e5, type: 3}
   CurrentEnemey: {fileID: 0}
-  counter: 3
+  counter: 0
   delay: 3
   enemeySpawns: 2
   spawned: 0
