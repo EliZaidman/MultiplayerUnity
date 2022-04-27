@@ -2,19 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class SpawnManager : MonoBehaviour
 {
-    public Transform spawnPoint;
-    public GameObject player;
-    public GameObject enemy;
-    public GameObject CurrentEnemey;
+    [SerializeField]
+    private List<Transform> spawnPoint = new List<Transform>(3);
+    
+    [SerializeField]
+    private GameObject player, enemy, currentEnemy;
 
     //Counter
     public float counter;
+
     //Time Between Spawns
     public float delay;
+
     //Amount
     public int enemeySpawns;
+
     //FailSafe to ensure exacly as wanted
     public bool spawned;
 
@@ -30,7 +34,7 @@ public class GameManager : MonoBehaviour
         {
             for (int i = 0; i < amount; i++)
             {
-                CurrentEnemey = Instantiate(enemy, spawnPoint.transform.position, spawnPoint.transform.rotation);
+                currentEnemy = Instantiate(enemy, spawnPoint[0].transform.position, spawnPoint[0].transform.rotation);
             }
             spawned = false;
             counter = 0;
