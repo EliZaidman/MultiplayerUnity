@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     [SerializeField]
-    private List<Transform> spawnPoint = new List<Transform>(3);
+    private Transform[] spawnPoints;
     
     [SerializeField]
     private GameObject player, enemy, currentEnemy;
@@ -22,26 +22,33 @@ public class SpawnManager : MonoBehaviour
     //FailSafe to ensure exacly as wanted
     public bool spawned;
 
-    void Update()
+    private void Update()
     {
         SpawnEnemies(enemeySpawns);
     }
 
-    void SpawnEnemies(int amount)
+    private void SpawnEnemies(int amount)
     {
         counter = counter + Time.deltaTime;
         if (counter > delay && spawned)
         {
             for (int i = 0; i < amount; i++)
             {
-                currentEnemy = Instantiate(enemy, spawnPoint[0].transform.position, spawnPoint[0].transform.rotation);
+                for (int j = 0; j < spawnPoints.Length; j++)
+                {
+                    currentEnemy = Instantiate(enemy, spawnPoints[j].transform.position, spawnPoints[j].transform.rotation);
+
+                    if (j > 2)
+                        j = 0;
+
+                    print($"{i}, {j}");
+                }
             }
+            
             spawned = false;
             counter = 0;
         }
         else
-        {
             spawned = true;
-        }
     }
 }
