@@ -1,36 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WeaponSpawner : MonoBehaviour
 {
-    [SerializeField] List<GameObject> UIElements;
-    [SerializeField] GameObject WeaponType1;
+    [SerializeField] GameObject canvas;
+    [SerializeField] GameObject weaponPrefab1;
 
     [SerializeField] bool canSpawn = false;
-    private int startingWeapon = 0;
+    private Vector3 myLoc;
 
     private void Awake()
     {
-        //add specific ui to the list
+        myLoc.x = transform.position.x;
+        myLoc.y = transform.position.y;
+        myLoc.z = transform.position.z;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         canSpawn = true;
-        foreach (var item in UIElements)
-        {
-            item.SetActive(true);
-        }
+        canvas.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
     {
         canSpawn = false;
-        foreach (var item in UIElements)
-        {
-            item.SetActive(false);
-        }
+        canvas.SetActive(false);
     }
 
     private void Update()
@@ -40,9 +37,11 @@ public class WeaponSpawner : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 //take players money
-                Instantiate(WeaponType1, transform);
+                Instantiate(weaponPrefab1, myLoc, Quaternion.identity);
                 gameObject.SetActive(false);
-                print("E pressed");
+
+                canvas.SetActive(false);
+                canSpawn = false;
             }
         }
     }
