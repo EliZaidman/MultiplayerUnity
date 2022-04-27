@@ -22,17 +22,16 @@ public class SpawnManager : MonoBehaviour
     //FailSafe to ensure exacly as wanted
     public bool spawned;
 
-    void Update()
+    private void Update()
     {
         SpawnEnemies(enemeySpawns);
     }
 
-    void SpawnEnemies(int amount)
+    private void SpawnEnemies(int amount)
     {
         counter = counter + Time.deltaTime;
         if (counter > delay && spawned)
         {
-
             for (int i = 0; i < amount; i++)
             {
                 for (int j = 0; j < spawnPoints.Length; j++)
@@ -44,15 +43,12 @@ public class SpawnManager : MonoBehaviour
 
                     print($"{i}, {j}");
                 }
-
             }
             
             spawned = false;
             counter = 0;
         }
         else
-        {
             spawned = true;
-        }
     }
 }

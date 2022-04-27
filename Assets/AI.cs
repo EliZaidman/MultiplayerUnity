@@ -4,16 +4,12 @@ using UnityEngine;
 using UnityEngine.AI;
 public class AI : MonoBehaviour
 {
-    public GameObject _target;
+    [SerializeField]
+    private Transform _target;
     private NavMeshAgent _agent;
-    void Start()
+    private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        _agent.destination = _target.transform.position;
+        _agent.destination = _target.position;
     }
 }

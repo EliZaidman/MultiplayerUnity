@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1758311650256706669
+--- !u!1 &4235417057089653112
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3785775466274926312}
-  - component: {fileID: 2649575977415481233}
-  - component: {fileID: 4685074390615363443}
-  - component: {fileID: 7195206640290754340}
-  - component: {fileID: -2614256242379746343}
-  - component: {fileID: 7257946591118053539}
+  - component: {fileID: 4235417057089653108}
+  - component: {fileID: 4235417057089653111}
+  - component: {fileID: 4235417057089653110}
+  - component: {fileID: 4235417057089653113}
+  - component: {fileID: 4235417057089653109}
+  - component: {fileID: 4235417057089653106}
   m_Layer: 0
-  m_Name: Enemey
+  m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3785775466274926312
+--- !u!4 &4235417057089653108
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758311650256706669}
+  m_GameObject: {fileID: 4235417057089653112}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.2759406, y: 1.0055249, z: -0.09003174}
+  m_LocalPosition: {x: 52, y: 1.5, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &2649575977415481233
+--- !u!33 &4235417057089653111
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758311650256706669}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &4685074390615363443
+  m_GameObject: {fileID: 4235417057089653112}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &4235417057089653110
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758311650256706669}
+  m_GameObject: {fileID: 4235417057089653112}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -84,39 +84,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &7195206640290754340
-SphereCollider:
+--- !u!65 &4235417057089653113
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758311650256706669}
+  m_GameObject: {fileID: 4235417057089653112}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-2614256242379746343
+--- !u!114 &4235417057089653109
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758311650256706669}
+  m_GameObject: {fileID: 4235417057089653112}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 898d460ad795f884d89e4fe2d7f72373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _target: {fileID: 1092278813327650546, guid: adf438e3e6a23524fa0f01dc4ec6c69e, type: 3}
---- !u!195 &7257946591118053539
+  _target: {fileID: 5034430480069603588, guid: adf438e3e6a23524fa0f01dc4ec6c69e, type: 3}
+--- !u!195 &4235417057089653106
 NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1758311650256706669}
+  m_GameObject: {fileID: 4235417057089653112}
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
@@ -130,5 +130,5 @@ NavMeshAgent:
   m_AutoRepath: 1
   m_Height: 1
   m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
+  m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4

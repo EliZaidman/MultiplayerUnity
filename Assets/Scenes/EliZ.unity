@@ -1257,13 +1257,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fb54f3f1ba73db4283582153a757a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint:
-  - {fileID: 0}
+  spawnPoints:
+  - {fileID: 1331141255}
   player: {fileID: 1334546174}
   enemy: {fileID: 1758311650256706669, guid: a17e9d539df61b641933d04f94dd41e5, type: 3}
   currentEnemy: {fileID: 0}
-  counter: 0
-  delay: 3
+  counter: 3
+  delay: 1
   enemeySpawns: 2
   spawned: 0
 --- !u!4 &534518966
