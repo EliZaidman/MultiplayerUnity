@@ -7,6 +7,8 @@ public class AI : MonoBehaviour
     [SerializeField]
     private Transform _target;
     private NavMeshAgent _agent;
+
+    public float _HP;
     private void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
