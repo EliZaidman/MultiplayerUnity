@@ -162,7 +162,7 @@ namespace StarterAssets
 			_cinemachineTargetYaw = ClampAngle(_cinemachineTargetYaw, float.MinValue, float.MaxValue);
             if (Input.GetMouseButton(1))
             {
-			_cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp = 5, TopClamp = 50);
+			_cinemachineTargetPitch = ClampAngle(_cinemachineTargetPitch, BottomClamp = -10, TopClamp = 60);
             }
             else
             {
