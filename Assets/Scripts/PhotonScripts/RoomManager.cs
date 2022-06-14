@@ -8,6 +8,12 @@ using Photon.Realtime;
 public class RoomManager : MonoBehaviour
 {
     [SerializeField] Text roomName;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
     // Start is called before the first frame update
     void Start()
     {

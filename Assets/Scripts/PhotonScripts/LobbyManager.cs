@@ -13,13 +13,13 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     private void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         PhotonNetwork.AutomaticallySyncScene = true;
-        
     }
+
     // Start is called before the first frame update
     void Start()
     {
-        
         PhotonNetwork.ConnectUsingSettings();
         PhotonNetwork.GameVersion = "1.0";
     }
@@ -37,7 +37,6 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     }
 
     public void UICreateRoom()
-
     {
         string roomName = roomToCreate.text;
         PhotonNetwork.CreateRoom(roomName);
