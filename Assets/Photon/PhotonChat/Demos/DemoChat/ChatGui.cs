@@ -141,7 +141,7 @@ namespace Photon.Chat.Demo
 
             if (!appIdPresent)
             {
-                Debug.LogError("You need to set the chat app ID in the PhotonServerSettings file in order to continue.");
+                Debug.LogError("You need to set the chat app PlayerAmount in the PhotonServerSettings file in order to continue.");
             }
         }
 
@@ -242,7 +242,7 @@ namespace Photon.Chat.Demo
             if (doingPrivateChat)
             {
                 // the channel name for a private conversation is (on the client!!) always composed of both user's IDs: "this:remote"
-                // so the remote ID is simple to figure out
+                // so the remote PlayerAmount is simple to figure out
 
                 string[] splitNames = this.selectedChannelName.Split(new char[] { ':' });
                 privateChatTarget = splitNames[1];

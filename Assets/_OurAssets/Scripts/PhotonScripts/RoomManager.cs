@@ -17,7 +17,8 @@ public class RoomManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        roomName.text = PhotonNetwork.CurrentRoom.Name;
+        if (roomName)
+            roomName.text = PhotonNetwork.CurrentRoom.Name;
     }
 
     // Update is called once per frame
