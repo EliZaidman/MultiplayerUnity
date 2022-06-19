@@ -9,7 +9,7 @@ public class OurPlayerController : MonoBehaviour
     [SerializeField] float movementSpeed = 1;
     [SerializeField] float sprintSpeed = 2;
 
-    private Rigidbody _rigidbody;
+    public Rigidbody _rigidbody;
     private bool isSprinting;
     private KeyCode sprintKey = KeyCode.LeftShift;
 
