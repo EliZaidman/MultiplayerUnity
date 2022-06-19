@@ -32,7 +32,7 @@ namespace Photon.Pun.Demo.PunBasics
         #endregion
 
         #region Private Fields
-
+            
         [Tooltip("The Player's UI GameObject Prefab")]
         [SerializeField]
         private GameObject playerUiPrefab;
