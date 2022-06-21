@@ -3,6 +3,9 @@
 using UnityEngine.InputSystem;
 #endif
 
+using Photon.Pun;
+using Photon.Realtime;
+
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
  */
 
@@ -91,13 +94,15 @@ namespace StarterAssets
 
 		private bool _hasAnimator;
 
+        [SerializeField] private PhotonView _photonView;
+
 		private void Awake()
 		{
 			// get a reference to our main camera
-			if (_mainCamera == null)
-			{
-				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
-			}
+			//if (_mainCamera == null)
+			//{
+			//	_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+			//}
 		}
 
 		private void Start()
